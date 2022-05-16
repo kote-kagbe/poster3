@@ -31,7 +31,8 @@ class _MethodRowState extends State<MethodRow> {
         Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: consts.rowHorizontalPadding),
-            child: IconButton(onPressed: () => {}, icon: const Icon(Icons.abc)))
+            child: IconButton(
+                onPressed: () => {}, icon: const Icon(Icons.smart_toy)))
       ],
     );
   }

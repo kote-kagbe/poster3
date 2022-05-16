@@ -73,8 +73,8 @@ class _AuthRowState extends State {
                   _status = val;
                 });
               },
-              activeIcon: const Icon(Icons.ac_unit),
-              inactiveIcon: const Icon(Icons.access_alarm))),
+              activeIcon: const Icon(Icons.security_rounded),
+              inactiveIcon: const Icon(Icons.man_rounded))),
       Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: consts.rowHorizontalPadding),

@@ -32,7 +32,7 @@ class AppBarRow extends AppBar {
                       right: consts.appBarRowHorizontalPadding),
                   child: GestureDetector(
                     onTap: () {},
-                    child: const Icon(Icons.more_vert),
+                    child: const Icon(Icons.smart_toy_outlined),
                   )),
             ]);
 }

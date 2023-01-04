@@ -1,0 +1,1 @@
+const posterTitle = 'POSTer³';

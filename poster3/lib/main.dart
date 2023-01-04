@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'poster_const.dart' show posterTitle;
-import 'ui/constructor/constructor.dart';
+
+import 'package:poster3/poster_const.dart' show posterTitle;
+import 'package:poster3/ui/constructor/constructor.dart';
 
 void main() {
   runApp(const PosterApp());

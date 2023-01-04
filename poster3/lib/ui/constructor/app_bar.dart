@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../poster_const.dart' show posterTitle;
+import 'package:poster3/poster_const.dart' show posterTitle;
 
 class ConstructorAppBar extends AppBar {
   ConstructorAppBar({super.key}): super(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'left_drawer.dart' show LeftDrawer;
-import 'right_drawer.dart' show RightDrawer;
-import 'body.dart' show Body;
-import 'app_bar.dart' show ConstructorAppBar;
+import 'package:poster3/ui/constructor/left_drawer.dart' show LeftDrawer;
+import 'package:poster3/ui/constructor/right_drawer.dart' show RightDrawer;
+import 'package:poster3/ui/constructor/body.dart' show Body;
+import 'package:poster3/ui/constructor/app_bar.dart' show ConstructorAppBar;
 
 class Constructor extends StatefulWidget {
   const Constructor({super.key});

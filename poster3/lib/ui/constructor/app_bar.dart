@@ -18,10 +18,9 @@ class ConstructorAppBar extends AppBar {
               Container(
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(4)),
-                  // color: Colors.red,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.red,
+                      color: Colors.amberAccent,
                       spreadRadius: 0,
                       blurRadius: 8,
                     ),
@@ -35,6 +34,15 @@ class ConstructorAppBar extends AppBar {
                 child: const Text('2'),
               )
             ]
+          )
+        )
+      ),
+      Builder(
+        builder: (context) => Container(
+          padding: const EdgeInsets.only(right: 2, top: 2),
+          child: IconButton(                
+            onPressed: () => {},
+            icon: const Icon(Icons.playlist_add_check_rounded)
           )
         )
       )

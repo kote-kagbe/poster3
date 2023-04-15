@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:poster3/poster_const.dart' show posterTitle;
+import 'package:poster3/poster_const.dart';
 
 class ConstructorAppBar extends AppBar {
   ConstructorAppBar({super.key}): super(
@@ -11,28 +11,38 @@ class ConstructorAppBar extends AppBar {
           padding: const EdgeInsets.only(top: 8, right: 8),
           child: Stack(
             children: [
-              IconButton(                
-                onPressed: () => Scaffold.of(context).openEndDrawer(),
-                icon: const Icon(Icons.smart_toy_outlined)
-              ),
               Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(4)),
-                  boxShadow: [
+                decoration: const ShapeDecoration(
+                  //border: CircleBorder(),
+                  shape: CircleBorder(),
+                  shadows: [
                     BoxShadow(
-                      color: Colors.amberAccent,
-                      spreadRadius: 0,
+                      color: glowColor,
+                      spreadRadius: 4,
                       blurRadius: 8,
-                    ),
-                    // BoxShadow(
-                    //   color: Colors.red,
-                    //   spreadRadius: -2,
-                    //   blurRadius: 8,
-                    // )
-                  ]
+                    )
+                  ],
+                  color: glowColor,
+                  //borderRadius: BorderRadius.all(Radius.circular(4)),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: glowColor,
+                  //     spreadRadius: 0,
+                  //     blurRadius: 2,
+                  //   ),
+                  //   // BoxShadow(
+                  //   //   color: Colors.red,
+                  //   //   spreadRadius: -2,
+                  //   //   blurRadius: 8,
+                  //   // )
+                  // ]
                 ),
-                child: const Text('2'),
-              )
+                child: const Text('4'),
+              ),
+              IconButton(
+                  onPressed: () => Scaffold.of(context).openEndDrawer(),
+                  icon: const Icon(Icons.smart_toy_outlined)
+              ),
             ]
           )
         )

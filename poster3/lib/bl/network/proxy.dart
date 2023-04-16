@@ -1,11 +1,11 @@
 import 'package:poster3/bl/types/isolatable.dart';
 import 'package:poster3/bl/types/pair.dart';
 
-class Proxy implements Isolatable {
-  final _path = Pair<String, String?>(key: 'path', value: null);
-  final _port = Pair<String, int?>(key: 'port', value: null);
-  final _user = Pair<String, String?>(key: 'user', value: null);
-  final _password = Pair<String, String?>(key: 'password', value: null);
+class Proxy with Isolatable {
+  final _path = Pair<String, String>(key: 'path', value: null);
+  final _port = Pair<String, int>(key: 'port', value: null);
+  final _user = Pair<String, String>(key: 'user', value: null);
+  final _password = Pair<String, String>(key: 'password', value: null);
 
   String? get path => _path.value;
   set path(String? newValue) => _path.value = newValue;

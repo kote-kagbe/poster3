@@ -1,7 +1,7 @@
 import 'package:poster3/bl/network/proxy.dart';
 import 'package:poster3/bl/types/isolatable.dart';
 
-class MacrosItem implements Isolatable {
+class MacrosItem with Isolatable {
   final proxy = Proxy();
   bool reloadPython = false;
   int protocolVersion = 6;

@@ -7,6 +7,8 @@ class Proxy with Isolatable {
   final _user = Pair<String, String>(key: 'user', value: null);
   final _password = Pair<String, String>(key: 'password', value: null);
 
+  static const placeholder = 'proxy';
+
   String? get path => _path.value;
   set path(String? newValue) => _path.value = newValue;
 
@@ -20,20 +22,19 @@ class Proxy with Isolatable {
   set password(String? newValue) => _password.value = newValue;
 
   @override
-  dynamic toIsolatable() {
-    return {
+  Pair<String, dynamic> toIsolatable() {
+    return Pair(key: placeholder, value: {
       _path.key: path,
       _port.key: port,
       _user.key: user,
       _password.key: password,
-    };
+    });
   }
 
   @override
   void fromIsolatable(dynamic value) {
-    final map = value as Map<String, dynamic>;
-    path = map[_path.key];
-    port = map[_port.key];
-
+    final map = value != null ? value as Map<String, dynamic> : null;
+    path = map?[placeholder]?[_path.key];
+    port = map?[placeholder]?[_port.key];
   }
 }

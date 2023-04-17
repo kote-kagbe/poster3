@@ -1,5 +1,6 @@
 import 'package:poster3/bl/network/proxy.dart';
 import 'package:poster3/bl/types/isolatable.dart';
+import 'package:poster3/bl/types/pair.dart';
 
 class MacrosItem with Isolatable {
   final proxy = Proxy();
@@ -11,8 +12,8 @@ class MacrosItem with Isolatable {
   //Map<String, >
 
   @override
-  dynamic toIsolatable() {
-
+  Pair<String, dynamic> toIsolatable() {
+    return Pair()
   }
 
   @override

@@ -1,5 +1,7 @@
 import 'package:poster3/bl/types/pair.dart';
 
+typedef IsolatableResult = Pair<String, dynamic>;
+
 /// миксин получения данных для передачи в другой изолят
 ///
 /// все классы, которые собираются передавать данные в изоляты,
@@ -9,7 +11,7 @@ import 'package:poster3/bl/types/pair.dart';
 abstract class Isolatable {
 
   /// возвращает данные для передачи в изолят
-  Pair<String, dynamic> toIsolatable();
+  IsolatableResult toIsolatable();
 
   /// загружает в себя данные, переданные в изолят
   ///

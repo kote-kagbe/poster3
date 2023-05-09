@@ -8,3 +8,4 @@ const Color glowColor = Color(0xB5FF8C00);
 
 /// Integers
 const int defaultRPCProtocol = 5;
+const double defaultPadding = 8;

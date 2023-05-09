@@ -2,4 +2,5 @@ import 'dart:async';
 
 final macrosCountChange = StreamController<int>.broadcast();
 final macrosEditChange = StreamController<bool>.broadcast();
+final macrosChange = StreamController<bool>.broadcast();
 

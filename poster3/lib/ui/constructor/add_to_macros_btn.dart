@@ -37,26 +37,30 @@ class _AddToMacrosButton extends State<AddToMacrosButton> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-          boxShadow: [
-            BoxShadow(
-              color: glowColor,
-              spreadRadius: 0,
-              blurRadius: 14,
-            ),
-          ]
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        boxShadow: [
+          BoxShadow(
+            color: glowColor,
+            spreadRadius: 0,
+            blurRadius: 14,
+          ),
+        ]
       ),
       child: Stack(
-          children: [
-            const Text('+',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+        children: [
+          const Text(
+            '+',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 17
             ),
-            IconButton(
-                onPressed: () => macros.add(MacrosItem()),
-                icon: const Icon(Icons.smart_toy_outlined)
-            ),
+          ),
+          IconButton(
+              onPressed: () => macros.add(MacrosItem()),
+              icon: const Icon(Icons.smart_toy_outlined)
+          ),
 
-          ]
+        ]
       )
     );
   }

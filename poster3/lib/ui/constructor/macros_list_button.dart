@@ -14,12 +14,12 @@ class MacrosListButton extends StatefulWidget {
 
 class _MacrosListButton extends State<MacrosListButton> {
   int macrosSize = 0;
-  StreamSubscription<int>? macrosCountListener;
+  late StreamSubscription<int> macrosCountListener;
 
   @override
   void initState() {
     super.initState();
-    macrosCountListener ??= macrosCountChange.stream.listen((newSize) {
+    macrosCountListener = macrosCountChange.stream.listen((newSize) {
       if(mounted) {
         setState(() => macrosSize = newSize);
       }
@@ -28,39 +28,45 @@ class _MacrosListButton extends State<MacrosListButton> {
 
   @override
   void dispose() {
-    macrosCountListener?.cancel();
+    macrosCountListener.cancel();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final stack = <Widget>[
-      GestureDetector(
-        child: IconButton(
-          onPressed: () => Scaffold.of(context).openEndDrawer(),
-          icon: const Icon(Icons.smart_toy_outlined)
-        ),
-        onSecondaryTap: () => macros.clear(),
-      )
+      Container(
+        padding: const EdgeInsets.only(bottom: 8),
+        child: InkResponse(
+          borderRadius: BorderRadius.circular(80.0),
+          onTap: () => Scaffold.of(context).openEndDrawer(),
+          onSecondaryTap: () => macros.clear(),
+          child: const SizedBox(
+            height: 50,
+            width: 50,
+            child: Icon(Icons.smart_toy_outlined)
+          ),
+        )
+      ),
     ];
 
     if(macrosSize > 0) {
       stack.insert(0,
-          Container(
-            decoration: const ShapeDecoration(
-              //border: CircleBorder(),
-              shape: CircleBorder(),
-              shadows: [
-                BoxShadow(
-                  color: glowColor,
-                  spreadRadius: defaultPadding,
-                  blurRadius: defaultPadding,
-                )
-              ],
-              color: glowColor,
-            ),
-            child: Text('$macrosSize'),
-          )
+        Container(
+          decoration: const ShapeDecoration(
+            shape: CircleBorder(),
+            shadows: [
+              BoxShadow(
+                color: glowColor,
+                spreadRadius: defaultPadding,
+                blurRadius: defaultPadding,
+              )
+            ],
+            color: glowColor,
+          ),
+          margin: const EdgeInsets.only(left: 4),
+          child: Text('$macrosSize'),
+        )
       );
     }
 

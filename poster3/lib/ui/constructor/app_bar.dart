@@ -10,7 +10,7 @@ class ConstructorAppBar extends AppBar {
       const MacrosListButton(),
       Builder(
         builder: (context) => Container(
-          padding: const EdgeInsets.only(right: 2, top: 2),
+          padding: const EdgeInsets.only(right: 8, top: 2),
           child: IconButton(                
             onPressed: () => {},
             icon: const Icon(Icons.playlist_add_check_rounded)

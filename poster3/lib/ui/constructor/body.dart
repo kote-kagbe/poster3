@@ -38,7 +38,7 @@ class _BodyState extends State<Body> {
               onPressed: () => macros.setCurrentItemFromItem(MacrosItem()),
               icon: const Icon(Icons.note_outlined)
             ),
-            AddToMacrosButton(),
+            const AddToMacrosButton(),
           ]
         ),
         Expanded(

@@ -1,4 +1,0 @@
-APP ICON
-    fultter pub run flutter_launcher_icons
-    Paste this link on the website where your app is available for download or in the description section of the platform or marketplace you’re using.
-    <a href="https://www.flaticon.com/free-icons/wifi" title="wifi icons">Wifi icons created by Freepik - Flaticon</a>
